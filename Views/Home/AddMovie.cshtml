@@ -4,43 +4,72 @@
 
 @model MovieCollection.Models.Movie
 
-<h1>Add a movie to the Database</h1>
+@*Syling to add columns*@
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    /* Create two equal columns that float next to each other */
+    .column {
+        float: left;
+        width: 50%;
+        padding: 10px;
+    }
+    .column2 {
+        float: left;
+        width: 50%;
+        padding: 100px 30px 30px 30px;
+    }
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+</style>
+<h1>Add a Movie to the Database</h1>
 @*Form to collect new movie information*@ 
-<div>
-    <form method="post">
-        <label asp-for="Category">Category</label><br />
-        <input asp-for="Category" /><br />
 
-        <label asp-for="Title">Title</label><br />
-        <input asp-for="Title" /><br />
+<div class="row">
+    <div class="column">
+        <form method="post">
+            <label asp-for="Category">Category</label><br />
+            <input asp-for="Category" /><br />
 
-        <label asp-for="Year">Year</label><br />
-        <input asp-for="Year" /><br />
+            <label asp-for="Title">Title</label><br />
+            <input asp-for="Title" /><br />
 
-        <label asp-for="Director">Director</label><br />
-        <input asp-for="Director" /><br />
+            <label asp-for="Year">Year</label><br />
+            <input asp-for="Year" /><br />
 
-        <label asp-for="Rating">Rating</label><br />
-        <select asp-for="Rating">
-            <option value="G">G</option>
-            <option value="PG">PG</option>
-            <option value="PG-13">PG-13</option>
-            <option value="R">R</option>
-        </select><br />
+            <label asp-for="Director">Director</label><br />
+            <input asp-for="Director" /><br />
 
-        <label asp-for="Edited">Edited</label><br />
-        <select asp-for="Edited">
-            <option value="true">Yes</option>
-            <option value="false">No</option>
-        </select><br />
+            <label asp-for="Rating">Rating</label><br />
+            <select asp-for="Rating">
+                <option value="G">G</option>
+                <option value="PG">PG</option>
+                <option value="PG-13">PG-13</option>
+                <option value="R">R</option>
+            </select><br />
 
-        <label asp-for="LentTo">Lent to</label><br />
-        <input asp-for="LentTo" /><br />
+            <label asp-for="Edited">Edited</label><br />
+            <select asp-for="Edited">
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </select><br />
 
-        <label asp-for="Notes">Notes</label><br />
-        <input asp-for="Notes" /><br /><br />
+            <label asp-for="LentTo">Lent to</label><br />
+            <input asp-for="LentTo" /><br />
 
-        <button type="submit">Add</button>
+            <label asp-for="Notes">Notes</label><br />
+            <input asp-for="Notes" /><br /><br />
 
-    </form>
+            <button type="submit">Add</button>
+        </form>
+    </div>
+    <div class="column2">
+        <img src="~/img/Movie animation.gif" height="350"/>
+    </div>
 </div>
