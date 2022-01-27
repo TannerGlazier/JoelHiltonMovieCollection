@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Add a Movie";
+}
+
+@model MovieCollection.Models.Movie
+
+<h1>Add a movie to the Database</h1>
+@*Form to collect new movie information*@ 
+<div>
+    <form method="post">
+        <label asp-for="Category">Category</label><br />
+        <input asp-for="Category" /><br />
+
+        <label asp-for="Title">Title</label><br />
+        <input asp-for="Title" /><br />
+
+        <label asp-for="Year">Year</label><br />
+        <input asp-for="Year" /><br />
+
+        <label asp-for="Director">Director</label><br />
+        <input asp-for="Director" /><br />
+
+        <label asp-for="Rating">Rating</label><br />
+        <select asp-for="Rating">
+            <option value="G">G</option>
+            <option value="PG">PG</option>
+            <option value="PG-13">PG-13</option>
+            <option value="R">R</option>
+        </select><br />
+
+        <label asp-for="Edited">Edited</label><br />
+        <select asp-for="Edited">
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+        </select><br />
+
+        <label asp-for="LentTo">Lent to</label><br />
+        <input asp-for="LentTo" /><br />
+
+        <label asp-for="Notes">Notes</label><br />
+        <input asp-for="Notes" /><br /><br />
+
+        <button type="submit">Add</button>
+
+    </form>
+</div>

@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "My Podcasts";
+}
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    /* Create two equal columns that float next to each other */
+    .column {
+        float: left;
+        width: 25%;
+        padding: 10px;
+    }
+    .column2 {
+        float: left;
+        width: 50%;
+        padding: 10px;
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+</style>
+<div class="row">
+    @*Baconsale Logo*@
+    <div class="column">
+        <img src="~/img/cropped-baconsale-logo-huge.jpg" />
+    </div>
+    @*Podcast info and link*@
+    <div class="column2">
+        <h1>The Baconsale Podcast</h1>
+        <p>This family-friendly pop culture podcast pits a movie critic and a comedian against each other as they argue about movies, music, TV, video games, food, and other things that don't really matter.</p>
+        <a href=" https://baconsale.com/">Listen to the Baconsale Podcast</a>
+    </div>
+
+</div>

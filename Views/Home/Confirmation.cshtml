@@ -1,0 +1,7 @@
+﻿@{
+    ViewData["Title"] = "Movie Added";
+}
+@model MovieCollection.Models.Movie
+@*Confirmation page if new movie is successfully added to the database*@
+<h2>@Model.Title Added Successfully!</h2>
+<a asp-controller="Home" asp-action="AddMovie">Add another Movie →</a>
