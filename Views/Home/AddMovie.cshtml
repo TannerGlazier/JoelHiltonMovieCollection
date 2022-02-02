@@ -34,8 +34,17 @@
 <div class="row">
     <div class="column">
         <form method="post">
-            <label asp-for="Category">Category</label><br />
-            <input asp-for="Category" /><br />
+
+            <div asp-validation-summary="All"></div>
+            
+            <label asp-for="CategoryId">Category</label><br />
+            <select asp-for="CategoryId">
+                <option value="">Select a Category</option>
+                @foreach (Category c in ViewBag.Categories)
+                 {
+                    <option value="@c.CategoryId">@c.CategoryName</option>
+                 }
+            </select><br />
 
             <label asp-for="Title">Title</label><br />
             <input asp-for="Title" /><br />
